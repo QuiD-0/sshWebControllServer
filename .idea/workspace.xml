@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="uescase 작성">
+    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="테스트 케이스 작성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Find.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Find.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/DeleteTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/DeleteTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/MakeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/MakeTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/FindListTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/FindListTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +99,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "spring.configuration.checksum": "7627cdb7e0770018d3a342bf042588ad",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -117,7 +117,7 @@
       <recent name="com.quid.webSSHControll.ssh" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DeleteTest">
+  <component name="RunManager" selected="Gradle.FindListTest.checkProcess">
     <configuration name="DeleteTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -140,6 +140,30 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="FindListTest.checkProcess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.quid.webSSHControll.ssh.command.FindListTest.checkProcess&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="FindListTest.mkdir" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -166,7 +190,7 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="FindListTest.testFindFolderList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FindListTest.processGrep" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -179,7 +203,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.usecase.FindListTest.testFindFolderList&quot;" />
+            <option value="&quot;com.quid.webSSHControll.ssh.command.FindListTest.processGrep&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -187,7 +211,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="MakeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -204,30 +228,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.quid.webSSHControll.ssh.command.MakeTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="SshConnectorTest.testCommand" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.SshConnectorTest.testCommand&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -260,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FindListTest.checkProcess" />
+        <item itemvalue="Gradle.FindListTest.processGrep" />
         <item itemvalue="Gradle.DeleteTest" />
         <item itemvalue="Gradle.MakeTest" />
         <item itemvalue="Gradle.FindListTest.mkdir" />
-        <item itemvalue="Gradle.FindListTest.testFindFolderList" />
-        <item itemvalue="Gradle.SshConnectorTest.testCommand" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +278,8 @@
       <updated>1685422142374</updated>
       <workItem from="1685422143688" duration="585000" />
       <workItem from="1685422758027" duration="13961000" />
-      <workItem from="1685448671774" duration="2167000" />
+      <workItem from="1685448671774" duration="2447000" />
+      <workItem from="1685452785988" duration="1850000" />
     </task>
     <task id="LOCAL-00001" summary="add ignore">
       <created>1685422266339</created>
@@ -308,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685436576597</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="테스트 케이스 작성">
+      <created>1685452204135</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685452204135</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +338,7 @@
     <MESSAGE value="init project" />
     <MESSAGE value="ssh서버 연결" />
     <MESSAGE value="uescase 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="uescase 작성" />
+    <MESSAGE value="테스트 케이스 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="테스트 케이스 작성" />
   </component>
 </project>
