@@ -11,14 +11,14 @@ interface Delete {
     class DeleteCommand : Delete {
         private val exec = SshConnector().connect().openChannel("exec") as ChannelExec
 
-        override fun deleteDirectory(path: String) {
+        override fun deleteDirectory(path: String): Unit = Unit.run {
             exec.apply {
                 setCommand("rm -rf $path")
                 connect()
             }
         }
 
-        override fun deleteFile(path: String, filename: String) {
+        override fun deleteFile(path: String, filename: String): Unit = Unit.run {
             exec.apply {
                 setCommand("cd $path; rm -rf $filename")
                 connect()

@@ -11,14 +11,14 @@ interface Make {
     class MakeCommand : Make {
         private val exec = SshConnector().connect().openChannel("exec") as ChannelExec
 
-        override fun makeDirectory(path: String, name: String) {
+        override fun makeDirectory(path: String, name: String): Unit = Unit.run {
             exec.apply {
                 setCommand("cd $path; mkdir $name")
                 connect()
             }
         }
 
-        override fun makeFile(path: String, name: String) {
+        override fun makeFile(path: String, name: String): Unit = Unit.run {
             exec.apply {
                 setCommand("cd $path; touch $name")
                 connect()

@@ -5,43 +5,41 @@ import com.quid.webSSHControll.ssh.SshConnector
 
 interface Find {
 
-    fun findFolderList(path:String): List<String>
+    fun findFolderList(path: String): List<String>
     fun processGrep(word: String): List<String>
     fun checkProcess(word: String): Boolean
 
-    class FindCommand: Find {
+    class FindCommand : Find {
         private val exec = SshConnector().connect().openChannel("exec") as ChannelExec
 
-        override fun findFolderList(path:String): List<String> {
-            exec.apply {
-                setCommand("cd $path; ls")
-                connect()
-            }.let {
-                return returnResult(it)
-            }
+        override fun findFolderList(path: String): List<String> = exec.apply {
+            setCommand("cd $path; ls")
+            connect()
+        }.let {
+            return returnList(it)
         }
 
-        override fun processGrep(word: String): List<String> {
+        override fun processGrep(word: String): List<String> =
             exec.apply {
                 setCommand("ps -ef | grep $word")
                 connect()
             }.let {
-                return returnResult(it)
+                return returnList(it)
             }
-        }
 
-        override fun checkProcess(word: String): Boolean {
+
+        override fun checkProcess(word: String): Boolean =
             exec.apply {
                 setCommand("ps -ef | grep java | grep $word | grep -v $0 | awk '{print $2}'")
                 connect()
             }.let {
-                return returnResult(it).isNotEmpty()
+                return returnList(it).isNotEmpty()
             }
-        }
 
-        private fun returnResult(result: ChannelExec): List<String> {
+
+        private fun returnList(result: ChannelExec): List<String> =
             result.inputStream.bufferedReader().use { return it.lines().toList() }
-        }
+
     }
 
 }
