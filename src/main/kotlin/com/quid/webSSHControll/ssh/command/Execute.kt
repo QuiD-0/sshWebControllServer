@@ -5,7 +5,7 @@ import com.quid.webSSHControll.ssh.SshConnector
 
 interface Execute {
 
-    fun execute(path: String, file: String): Unit
+    fun execute(path: String, file: String)
 
     class ExecuteCommand : Execute {
         private val exec = SshConnector().connect().openChannel("exec") as ChannelExec
