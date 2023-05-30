@@ -3,27 +3,26 @@ package com.quid.webSSHControll.ssh.command
 import com.jcraft.jsch.ChannelExec
 import com.quid.webSSHControll.ssh.SshConnector
 
-interface Make {
+interface Delete {
 
-    fun makeDirectory(path: String, name: String)
-    fun makeFile(path: String, name: String)
+    fun deleteDirectory(path: String)
+    fun deleteFile(path: String, filename: String)
 
-    class MakeCommand : Make {
+    class DeleteCommand : Delete {
         private val exec = SshConnector().connect().openChannel("exec") as ChannelExec
 
-        override fun makeDirectory(path: String, name: String) {
+        override fun deleteDirectory(path: String) {
             exec.apply {
-                setCommand("cd $path; mkdir $name")
+                setCommand("rm -rf $path")
                 connect()
             }
         }
 
-        override fun makeFile(path: String, name: String) {
+        override fun deleteFile(path: String, filename: String) {
             exec.apply {
-                setCommand("cd $path; touch $name")
+                setCommand("cd $path; rm -rf $filename")
                 connect()
             }
         }
-
     }
 }

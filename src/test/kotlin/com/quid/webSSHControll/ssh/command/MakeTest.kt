@@ -1,13 +1,26 @@
 package com.quid.webSSHControll.ssh.command
 
+import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 
 class MakeTest{
 
     private val make: Make = Make.MakeCommand()
+    private val delete: Delete = Delete.DeleteCommand()
 
-    @org.junit.jupiter.api.Test
-    fun testMakeDirectory(){
+    @AfterEach
+    fun tearDown(){
+        delete.deleteDirectory("/home/wodnd/test")
+    }
+
+    @Test
+    fun makeDirectory(){
         assertDoesNotThrow { make.makeDirectory("/home/wodnd", "test") }
+    }
+
+    @Test
+    fun makeFile(){
+        assertDoesNotThrow { make.makeFile("/home/wodnd/test", "test.txt") }
     }
 }
