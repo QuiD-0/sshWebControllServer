@@ -19,7 +19,7 @@ interface Find {
             }
         }
 
-        fun returnResult(result: ChannelExec): List<String> {
+        private fun returnResult(result: ChannelExec): List<String> {
             result.inputStream.bufferedReader().use { return it.lines().toList() }
         }
     }

@@ -4,23 +4,24 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 
-class MakeTest{
+class MakeTest {
 
     private val make: Make = Make.MakeCommand()
     private val delete: Delete = Delete.DeleteCommand()
 
     @AfterEach
-    fun tearDown(){
+    fun tearDown() {
         delete.deleteDirectory("/home/wodnd/test")
     }
 
     @Test
-    fun makeDirectory(){
+    fun makeDirectory() {
         assertDoesNotThrow { make.makeDirectory("/home/wodnd", "test") }
     }
 
     @Test
-    fun makeFile(){
+    fun makeFile() {
+        make.makeDirectory("/home/wodnd", "test")
         assertDoesNotThrow { make.makeFile("/home/wodnd/test", "test.txt") }
     }
 }
