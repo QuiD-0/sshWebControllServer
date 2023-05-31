@@ -1,12 +1,14 @@
 package com.quid.webSSHControll.ssh.command
 
 import com.quid.webSSHControll.ssh.SshConnector
+import org.springframework.stereotype.Component
 
 interface Delete {
 
     fun deleteDirectory(path: String)
     fun deleteFile(path: String, filename: String)
 
+    @Component
     class DeleteCommand : Delete {
         private val exec = SshConnector().exec()
 

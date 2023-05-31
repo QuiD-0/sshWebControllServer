@@ -2,6 +2,7 @@ package com.quid.webSSHControll.ssh.command
 
 import com.jcraft.jsch.ChannelExec
 import com.quid.webSSHControll.ssh.SshConnector
+import org.springframework.stereotype.Component
 
 interface Find {
 
@@ -9,6 +10,7 @@ interface Find {
     fun processGrep(word: String): List<String>
     fun checkProcess(word: String): Boolean
 
+    @Component
     class FindCommand : Find {
         private val exec = SshConnector().exec()
 

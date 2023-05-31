@@ -4,32 +4,32 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 
-class FindListTest {
+class FindTest {
 
-    private val findList: Find = Find.FindCommand()
+    private val find: Find = Find.FindCommand()
 
     @Test
     fun findFolderList() {
         assertDoesNotThrow {
-            findList.findFolderList("/home/wodnd")
+            find.findFolderList("/home/wodnd")
         }
     }
 
     @Test
     fun processGrep() {
         assertDoesNotThrow {
-            findList.processGrep("SNAPSHOT")
+            find.processGrep("SNAPSHOT")
                 .onEach { println(it) }
         }
     }
 
     @Test
     fun checkProcessWhenExist() {
-        assertEquals(true, findList.checkProcess("java"))
+        assertEquals(true, find.checkProcess("java"))
     }
 
     @Test
     fun checkProcessWhenNotExist() {
-        assertEquals(false, findList.checkProcess("notFoundProgram"))
+        assertEquals(false, find.checkProcess("notFoundProgram"))
     }
 }

@@ -1,11 +1,13 @@
 package com.quid.webSSHControll.ssh.command
 
 import com.quid.webSSHControll.ssh.SshConnector
+import org.springframework.stereotype.Component
 
 interface Execute {
 
     fun execute(path: String, file: String)
 
+    @Component
     class ExecuteCommand : Execute {
         private val exec = SshConnector().exec()
 

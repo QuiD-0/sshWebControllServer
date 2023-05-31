@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="uescase 작성">
+    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="리팩토링">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/SshConnector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/SshConnector.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Delete.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Delete.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Execute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Execute.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Find.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Find.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Make.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Make.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/SshConnectorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/SshConnectorTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/ExecuteTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/ExecuteTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/FindListTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/FindTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,8 +121,8 @@
       <recent name="com.quid.webSSHControll.ssh" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.FindListTest">
-    <configuration name="ExecuteTest.execute" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ExecuteTest">
+    <configuration name="ExecuteTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -135,7 +135,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.command.ExecuteTest.execute&quot;" />
+            <option value="&quot;com.quid.webSSHControll.ssh.command.ExecuteTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -145,7 +145,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FindListTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FindTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -158,7 +158,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.command.FindListTest&quot;" />
+            <option value="&quot;com.quid.webSSHControll.ssh.command.FindTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -168,7 +168,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FindListTest.checkProcess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FindTest.checkProcessWhenExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -181,7 +181,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.command.FindListTest.checkProcess&quot;" />
+            <option value="&quot;com.quid.webSSHControll.ssh.command.FindTest.checkProcessWhenExist&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -191,7 +191,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FindListTest.checkProcess2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FindTest.checkProcessWhenNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -204,7 +204,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.command.FindListTest.checkProcess2&quot;" />
+            <option value="&quot;com.quid.webSSHControll.ssh.command.FindTest.checkProcessWhenNotExist&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -214,7 +214,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FindListTest.processGrep" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FindTest.processGrep" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -227,7 +227,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.command.FindListTest.processGrep&quot;" />
+            <option value="&quot;com.quid.webSSHControll.ssh.command.FindTest.processGrep&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -259,11 +259,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.FindListTest" />
-        <item itemvalue="Gradle.ExecuteTest.execute" />
-        <item itemvalue="Gradle.FindListTest.checkProcess2" />
-        <item itemvalue="Gradle.FindListTest.checkProcess" />
-        <item itemvalue="Gradle.FindListTest.processGrep" />
+        <item itemvalue="Gradle.ExecuteTest" />
+        <item itemvalue="Gradle.FindTest" />
+        <item itemvalue="Gradle.FindTest.checkProcessWhenNotExist" />
+        <item itemvalue="Gradle.FindTest.checkProcessWhenExist" />
+        <item itemvalue="Gradle.FindTest.processGrep" />
       </list>
     </recent_temporary>
   </component>
