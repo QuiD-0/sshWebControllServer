@@ -10,10 +10,10 @@ interface RunSh {
     @Service
     class RunShUseCase : RunSh {
         private val find = Find.FindCommand()
-        private val exce = Execute.ExecuteCommand()
+        private val exec = Execute.ExecuteCommand()
 
         override fun runSh(path: String, file: String) {
-            exce.execute(path, file)
+            exec.execute(path, file)
         }
     }
 }
