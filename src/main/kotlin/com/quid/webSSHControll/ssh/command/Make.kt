@@ -1,6 +1,6 @@
 package com.quid.webSSHControll.ssh.command
 
-import com.quid.webSSHControll.ssh.SshConnector
+import com.quid.webSSHControll.ssh.createSSH
 
 interface Make {
 
@@ -10,20 +10,21 @@ interface Make {
     class MakeCommand : Make {
 
         override fun makeDirectory(path: String, name: String) {
-            val exec = SshConnector().exec()
-            exec.apply {
-                setCommand("cd $path; mkdir $name")
-                connect()
+            with(createSSH()) {
+                exec().apply {
+                    setCommand("cd $path; mkdir $name")
+                    connect()
+                }
+                disconnect()
             }
         }
 
-        override fun makeFile(path: String, name: String) {
-            val exec = SshConnector().exec()
-            exec.apply {
+        override fun makeFile(path: String, name: String) = with(createSSH()) {
+            exec().apply {
                 setCommand("cd $path; touch $name")
                 connect()
             }
+            disconnect()
         }
-
     }
 }

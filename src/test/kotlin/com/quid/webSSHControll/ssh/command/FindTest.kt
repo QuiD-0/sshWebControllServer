@@ -18,9 +18,7 @@ class FindTest {
     @Test
     fun getProcess() {
         assertDoesNotThrow {
-            find.getJavaProcessPID("gesgwad").also {
-                println(it.isNotEmpty())
-            }
+            find.getJavaProcessPID("gesgwad")
         }
     }
 

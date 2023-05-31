@@ -7,6 +7,10 @@ import org.springframework.stereotype.Component
 class SshConnector {
     private lateinit var session: Session
 
+    init {
+        connect()
+    }
+
     private fun connect(): SshConnector {
         session = JSch().getSession(user, host, port).apply {
             setConfig("StrictHostKeyChecking", "no")
@@ -16,16 +20,20 @@ class SshConnector {
         return this
     }
 
-    private fun openChannel(channelType: String): Channel {
-        return session.openChannel(channelType)
-    }
-
     fun exec(): ChannelExec {
-        return SshConnector().connect().openChannel("exec") as ChannelExec
+        return openChannel("exec") as ChannelExec
     }
 
     fun sftp(): ChannelSftp {
-        return SshConnector().connect().openChannel("sftp") as ChannelSftp
+        return openChannel("sftp") as ChannelSftp
+    }
+
+    fun disconnect() {
+        session.disconnect()
+    }
+
+    private fun openChannel(channelType: String): Channel {
+        return session.openChannel(channelType)
     }
 
     companion object {
@@ -33,4 +41,8 @@ class SshConnector {
         private const val host: String = "130.162.136.116"
         private const val port: Int = 22
     }
+}
+
+fun createSSH(): SshConnector {
+    return SshConnector()
 }
