@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="엔드포인트 생성">
+    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/usecase/RunSh.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/gateway/web/ApiController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/gateway/web/CheckApiController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/SshConnector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/SshConnector.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/SshConnector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/domain/SshConnector.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Delete.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Delete.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Execute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Execute.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Find.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Find.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Make.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Make.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/SshConnectorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/SshConnectorTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/FindTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/FindTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Kotlin Class" />
+        <option value="AnnotationType" />
+        <option value="Class" />
         <option value="Kotlin Interface" />
       </list>
     </option>
@@ -118,13 +123,39 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\quid\Desktop\sshWebControllServer\src\main\kotlin\com\quid\webSSHControll\ssh\domain" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.quid.webSSHControll.ssh.command" />
       <recent name="com.quid.webSSHControll.ssh.usecase" />
       <recent name="com.quid.webSSHControll.ssh" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.FindTest">
+  <component name="RunManager" selected="Gradle.FindTest.existFile">
+    <configuration name="AopTest.aopTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.quid.webSSHControll.ssh.AopTest.aopTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ExecuteTest.execute" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -171,7 +202,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FindTest.findFolderList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FindTest.existFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -184,7 +215,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.command.FindTest.findFolderList&quot;" />
+            <option value="&quot;com.quid.webSSHControll.ssh.command.FindTest.existFile&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -194,30 +225,25 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FindTest.getProcess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="sshWebControllServer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.quid.webSSHControll.ssh.command.FindTest.getProcess&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #20" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="20" requestIdentifier="#20" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -242,11 +268,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FindTest.existFile" />
         <item itemvalue="Gradle.FindTest" />
-        <item itemvalue="Gradle.FindTest.getProcess" />
         <item itemvalue="Gradle.ExecuteTest.execute" />
-        <item itemvalue="Gradle.FindTest.findFolderList" />
-        <item itemvalue="HTTP Request.generated-requests | #20" />
+        <item itemvalue="Gradle.sshWebControllServer [build]" />
+        <item itemvalue="Gradle.AopTest.aopTest" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +288,8 @@
       <workItem from="1685422758027" duration="13961000" />
       <workItem from="1685448671774" duration="2447000" />
       <workItem from="1685452785988" duration="4562000" />
-      <workItem from="1685505722224" duration="805000" />
+      <workItem from="1685505722224" duration="2261000" />
+      <workItem from="1685517514727" duration="5617000" />
     </task>
     <task id="LOCAL-00001" summary="add ignore">
       <created>1685422266339</created>
@@ -320,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685500293189</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="리팩토링">
+      <created>1685506574170</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685506574170</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +380,7 @@
     <MESSAGE value="프로세스 확인" />
     <MESSAGE value="컴포넌트 등록" />
     <MESSAGE value="엔드포인트 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="엔드포인트 생성" />
+    <MESSAGE value="리팩토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="리팩토링" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 package com.quid.webSSHControll.ssh.command
 
-import com.quid.webSSHControll.ssh.createSSH
+import com.quid.webSSHControll.ssh.domain.createSSH
 
 interface Make {
 
