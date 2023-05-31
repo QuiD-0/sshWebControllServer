@@ -1,6 +1,5 @@
 package com.quid.webSSHControll.ssh.command
 
-import com.jcraft.jsch.ChannelExec
 import com.quid.webSSHControll.ssh.SshConnector
 
 interface Delete {
@@ -9,7 +8,7 @@ interface Delete {
     fun deleteFile(path: String, filename: String)
 
     class DeleteCommand : Delete {
-        private val exec = SshConnector().connect().openChannel("exec") as ChannelExec
+        private val exec = SshConnector().exec()
 
         override fun deleteDirectory(path: String): Unit = Unit.run {
             exec.apply {

@@ -1,6 +1,5 @@
 package com.quid.webSSHControll.ssh.command
 
-import com.jcraft.jsch.ChannelExec
 import com.quid.webSSHControll.ssh.SshConnector
 
 interface Make {
@@ -9,7 +8,7 @@ interface Make {
     fun makeFile(path: String, name: String)
 
     class MakeCommand : Make {
-        private val exec = SshConnector().connect().openChannel("exec") as ChannelExec
+        private val exec = SshConnector().exec()
 
         override fun makeDirectory(path: String, name: String): Unit = Unit.run {
             exec.apply {

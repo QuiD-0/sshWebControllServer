@@ -6,12 +6,16 @@ import org.junit.jupiter.api.assertDoesNotThrow
 class SshConnectorTest{
 
     @Test
-    fun testConnect(){
-        assertDoesNotThrow { SshConnector().connect() }
+    fun getExec() {
+        assertDoesNotThrow {
+            SshConnector().exec()
+        }
     }
 
     @Test
-    fun testDisconnect(){
-        assertDoesNotThrow{ SshConnector().connect().disconnect() }
+    fun getSftp() {
+        assertDoesNotThrow {
+            SshConnector().sftp()
+        }
     }
 }

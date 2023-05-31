@@ -1,18 +1,13 @@
 package com.quid.webSSHControll.ssh
 
-import com.jcraft.jsch.Channel
-import com.jcraft.jsch.ChannelExec
-import com.jcraft.jsch.JSch
-import com.jcraft.jsch.Session
+import com.jcraft.jsch.*
+import org.springframework.stereotype.Component
 
+@Component
 class SshConnector {
     private lateinit var session: Session
-    private lateinit var exec: ChannelExec
-    private val user: String = "wodnd"
-    private val host: String = "130.162.136.116"
-    private val port: Int = 22
 
-    fun connect(): SshConnector {
+    private fun connect(): SshConnector {
         session = JSch().getSession(user, host, port).apply {
             setConfig("StrictHostKeyChecking", "no")
             setPassword("wo12dnd12")
@@ -21,12 +16,21 @@ class SshConnector {
         return this
     }
 
-    fun disconnect() {
-        session.disconnect()
-    }
-
-    fun openChannel(channelType: String): Channel {
+    private fun openChannel(channelType: String): Channel {
         return session.openChannel(channelType)
     }
 
+    fun exec(): ChannelExec {
+        return SshConnector().connect().openChannel("exec") as ChannelExec
+    }
+
+    fun sftp(): ChannelSftp {
+        return SshConnector().connect().openChannel("sftp") as ChannelSftp
+    }
+
+    companion object {
+        private const val user: String = "wodnd"
+        private const val host: String = "130.162.136.116"
+        private const val port: Int = 22
+    }
 }

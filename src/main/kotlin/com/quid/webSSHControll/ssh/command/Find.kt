@@ -10,7 +10,7 @@ interface Find {
     fun checkProcess(word: String): Boolean
 
     class FindCommand : Find {
-        private val exec = SshConnector().connect().openChannel("exec") as ChannelExec
+        private val exec = SshConnector().exec()
 
         override fun findFolderList(path: String): List<String> = exec.apply {
             setCommand("cd $path; ls")
