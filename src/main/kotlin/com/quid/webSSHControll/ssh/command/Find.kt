@@ -2,41 +2,44 @@ package com.quid.webSSHControll.ssh.command
 
 import com.jcraft.jsch.ChannelExec
 import com.quid.webSSHControll.ssh.SshConnector
-import org.springframework.stereotype.Component
 
 interface Find {
 
     fun findFolderList(path: String): List<String>
-    fun processGrep(word: String): List<String>
-    fun checkProcess(word: String): Boolean
+    fun getJavaProcessPID(word: String): List<String>
+    fun getProcessPID(word: String): List<String>
 
-    @Component
     class FindCommand : Find {
-        private val exec = SshConnector().exec()
 
-        override fun findFolderList(path: String): List<String> = exec.apply {
-            setCommand("cd $path; ls")
-            connect()
-        }.let {
-            return returnList(it)
-        }
-
-        override fun processGrep(word: String): List<String> =
+        override fun findFolderList(path: String): List<String> {
+            val exec = SshConnector().exec()
             exec.apply {
-                setCommand("ps -ef | grep $word")
+                setCommand("cd $path; ls")
                 connect()
             }.let {
                 return returnList(it)
             }
+        }
 
-
-        override fun checkProcess(word: String): Boolean =
+        override fun getJavaProcessPID(word: String): List<String> {
+            val exec = SshConnector().exec()
             exec.apply {
                 setCommand("ps -ef | grep java | grep $word | grep -v $0 | awk '{print $2}'")
                 connect()
             }.let {
-                return returnList(it).isNotEmpty()
+                return returnList(it)
             }
+        }
+
+        override fun getProcessPID(word: String): List<String> {
+            val exec = SshConnector().exec()
+            exec.apply {
+                setCommand("ps -ef | grep $word | grep -v $0 | awk '{print $2}'")
+                connect()
+            }.let {
+                return returnList(it)
+            }
+        }
 
 
         private fun returnList(result: ChannelExec): List<String> =

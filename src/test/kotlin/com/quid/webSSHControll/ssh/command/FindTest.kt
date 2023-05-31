@@ -1,6 +1,5 @@
 package com.quid.webSSHControll.ssh.command
 
-import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 
@@ -15,21 +14,14 @@ class FindTest {
         }
     }
 
+
     @Test
-    fun processGrep() {
+    fun getProcess() {
         assertDoesNotThrow {
-            find.processGrep("SNAPSHOT")
-                .onEach { println(it) }
+            find.getJavaProcessPID("gesgwad").also {
+                println(it.isNotEmpty())
+            }
         }
     }
 
-    @Test
-    fun checkProcessWhenExist() {
-        assertEquals(true, find.checkProcess("java"))
-    }
-
-    @Test
-    fun checkProcessWhenNotExist() {
-        assertEquals(false, find.checkProcess("notFoundProgram"))
-    }
 }
