@@ -13,6 +13,7 @@ interface RunSh {
         private val exec = Execute.ExecuteCommand()
 
         override fun runSh(path: String, file: String) {
+            if(!find.existFile(path, file)) throw Exception("File Not Found")
             exec.execute(path, file)
         }
     }
