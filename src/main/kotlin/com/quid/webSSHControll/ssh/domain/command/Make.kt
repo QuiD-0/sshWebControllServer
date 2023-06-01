@@ -1,4 +1,4 @@
-package com.quid.webSSHControll.ssh.command
+package com.quid.webSSHControll.ssh.domain.command
 
 import com.quid.webSSHControll.ssh.domain.createSSH
 

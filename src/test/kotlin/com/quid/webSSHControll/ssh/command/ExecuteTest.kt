@@ -1,5 +1,7 @@
 package com.quid.webSSHControll.ssh.command
 
+import com.quid.webSSHControll.ssh.domain.command.Delete
+import com.quid.webSSHControll.ssh.domain.command.Execute
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertDoesNotThrow
 import org.junit.jupiter.api.Test

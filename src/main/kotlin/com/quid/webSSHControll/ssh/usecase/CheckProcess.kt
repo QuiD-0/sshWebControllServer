@@ -1,6 +1,6 @@
 package com.quid.webSSHControll.ssh.usecase
 
-import com.quid.webSSHControll.ssh.command.Find
+import com.quid.webSSHControll.ssh.domain.command.Find
 import org.springframework.stereotype.Service
 
 interface CheckProcess {
