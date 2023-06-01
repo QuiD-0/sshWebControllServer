@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="디렉터리 수정">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/usecase/RunShTest.kt" afterDir="false" />
+    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="sh 실행 유즈케이스 생성">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/gateway/web/ExecuteApiController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/usecase/RunSh.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/usecase/RunSh.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +52,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="AnnotationType" />
         <option value="Class" />
         <option value="Kotlin Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -125,7 +124,7 @@
       <recent name="com.quid.webSSHControll.ssh" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RunShTest.runSh">
+  <component name="RunManager" selected="Spring Boot.WebSshControllApplication">
     <configuration name="ExecuteTest.execute" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -285,7 +284,7 @@
       <workItem from="1685452785988" duration="4562000" />
       <workItem from="1685505722224" duration="2261000" />
       <workItem from="1685517514727" duration="6155000" />
-      <workItem from="1685579185032" duration="2027000" />
+      <workItem from="1685579185032" duration="3465000" />
     </task>
     <task id="LOCAL-00001" summary="add ignore">
       <created>1685422266339</created>
@@ -385,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685581037825</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sh 실행 유즈케이스 생성">
+      <created>1685581308825</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685581308825</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,6 +423,7 @@
     <MESSAGE value="파일 존재여부 확인" />
     <MESSAGE value="bash 파일 실행" />
     <MESSAGE value="디렉터리 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="디렉터리 수정" />
+    <MESSAGE value="sh 실행 유즈케이스 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="sh 실행 유즈케이스 생성" />
   </component>
 </project>
