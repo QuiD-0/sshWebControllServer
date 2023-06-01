@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="bash 파일 실행">
+    <list default="true" id="7cfb20c2-e3ec-42cc-8fd2-1bb2d6c50cc4" name="Changes" comment="디렉터리 수정">
       <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/usecase/RunShTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Delete.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/domain/command/Delete.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Execute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/domain/command/Execute.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Find.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/domain/command/Find.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/command/Make.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/domain/command/Make.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/usecase/CheckProcess.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/usecase/CheckProcess.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/usecase/RunSh.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/quid/webSSHControll/ssh/usecase/RunSh.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/DeleteTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/DeleteTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/ExecuteTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/ExecuteTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/FindTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/FindTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/MakeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/quid/webSSHControll/ssh/command/MakeTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +125,7 @@
       <recent name="com.quid.webSSHControll.ssh" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.FindTest">
+  <component name="RunManager" selected="Gradle.RunShTest.runSh">
     <configuration name="ExecuteTest.execute" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -226,23 +218,25 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="sshWebControllServer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RunShTest.runSh" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.quid.webSSHControll.ssh.usecase.RunShTest.runSh&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -269,11 +263,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RunShTest.runSh" />
         <item itemvalue="Gradle.FindTest" />
         <item itemvalue="Gradle.FindTest.notExistFile" />
         <item itemvalue="Gradle.FindTest.existFile" />
         <item itemvalue="Gradle.ExecuteTest.execute" />
-        <item itemvalue="Gradle.sshWebControllServer [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +285,7 @@
       <workItem from="1685452785988" duration="4562000" />
       <workItem from="1685505722224" duration="2261000" />
       <workItem from="1685517514727" duration="6155000" />
-      <workItem from="1685579185032" duration="1799000" />
+      <workItem from="1685579185032" duration="2027000" />
     </task>
     <task id="LOCAL-00001" summary="add ignore">
       <created>1685422266339</created>
@@ -384,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685580620787</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="디렉터리 수정">
+      <created>1685581037825</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685581037825</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,6 +416,7 @@
     <MESSAGE value="오탈자 수정" />
     <MESSAGE value="파일 존재여부 확인" />
     <MESSAGE value="bash 파일 실행" />
-    <option name="LAST_COMMIT_MESSAGE" value="bash 파일 실행" />
+    <MESSAGE value="디렉터리 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="디렉터리 수정" />
   </component>
 </project>
