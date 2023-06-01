@@ -8,6 +8,7 @@ interface Find {
     fun findFolderList(path: String): List<String>
     fun getJavaProcessPID(word: String): List<String>
     fun getProcessPID(word: String): List<String>
+    fun existFile(path: String, file: String): Boolean
 
     class FindCommand : Find {
 
@@ -42,6 +43,20 @@ interface Find {
                     disconnect()
                 }
             }
+        }
+
+        override fun existFile(path: String, file: String): Boolean = with(createSSH()) {
+            val sftp = sftp().also { it.connect() }
+            val flag = true
+            try {
+                sftp.lstat("$path/$file")
+            } catch (e: Exception) {
+                return false
+            }finally {
+                disconnect()
+                sftp.disconnect()
+            }
+            return flag
         }
 
 

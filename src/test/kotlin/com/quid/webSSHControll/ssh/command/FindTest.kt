@@ -1,6 +1,7 @@
 package com.quid.webSSHControll.ssh.command
 
 import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
@@ -33,5 +34,15 @@ class FindTest {
         assertDoesNotThrow {
             find.getJavaProcessPID("gesgwad")
         }
+    }
+
+    @Test
+    fun existFile() {
+        assertEquals(true, find.existFile("/home/wodnd", "test.sh"))
+    }
+
+    @Test
+    fun notExistFile() {
+        assertEquals(false, find.existFile("/home/wodnd", "test1.sh"))
     }
 }
