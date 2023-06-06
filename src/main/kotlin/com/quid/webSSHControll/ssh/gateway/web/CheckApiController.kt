@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/check")
 class CheckApiController(
     private val checkProcess: CheckProcess
 ) {
-    @GetMapping("/check/{name}")
+    @GetMapping("/{name}")
     @ResponseStatus(OK)
     fun checkPID(@PathVariable("name") name: String): Boolean = checkProcess.checkProcess(name)
 
-    @GetMapping("/check/java/{name}")
+    @GetMapping("/java/{name}")
     @ResponseStatus(OK)
     fun checkJavaPID(@PathVariable("name") name: String): Boolean = checkProcess.checkJavaProcess(name)
 
