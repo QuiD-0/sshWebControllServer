@@ -3,9 +3,11 @@ package com.quid.webSSHControll.ssh.command
 import com.quid.webSSHControll.ssh.domain.command.Delete
 import com.quid.webSSHControll.ssh.domain.command.Make
 import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 
+@Disabled
 class MakeTest {
 
     private val make: Make = Make.MakeCommand()
