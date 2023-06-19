@@ -11,7 +11,7 @@ class ExecuteApiController(
     private val runSh: RunSh
 ) {
 
-    @GetMapping("/test")
-    fun run(): Unit = runSh.execute("/home/wodnd", "run.sh")
+    @GetMapping("/mine")
+    fun runMine(): Unit = runSh.execute("/home/wodnd", "runMine.sh")
 
 }
