@@ -6,8 +6,6 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertDoesNotThrow
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
 
 @Disabled
 class ExecuteTest {
@@ -23,7 +21,7 @@ class ExecuteTest {
     @Test
     fun execute() {
         assertDoesNotThrow {
-            execute.execute("cd /home/wodnd; chmod +x run.sh; bash run.sh")
+            execute.file("cd /home/wodnd; chmod +x run.sh; bash run.sh")
         }
     }
 }

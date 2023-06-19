@@ -12,6 +12,6 @@ interface Command {
         private val exec = Execute.ExecuteCommand()
 
         override fun execute(command: String) =
-                exec.execute(command)
+                exec.command(command)
     }
 }

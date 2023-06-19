@@ -12,6 +12,6 @@ class ExecuteApiController(
 ) {
 
     @GetMapping("/mine")
-    fun runMine(): Unit = runSh.execute("/home/wodnd", "runMine.sh")
+    fun runMine(): Unit = runSh.file("/home/wodnd", "runMine.sh")
 
 }

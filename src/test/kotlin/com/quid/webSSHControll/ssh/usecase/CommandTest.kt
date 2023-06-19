@@ -6,16 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class RunShTest{
+class CommandTest{
 
     @Autowired
-    private lateinit var runSh: RunSh
+    private lateinit var command: Command
 
     @Test
-    fun runSh() {
+    fun dockerTest() {
         assertDoesNotThrow {
-            runSh.file("/home/wodnd", "run.sh")
+            command.execute("sudo docker ps")
         }
     }
-
 }
