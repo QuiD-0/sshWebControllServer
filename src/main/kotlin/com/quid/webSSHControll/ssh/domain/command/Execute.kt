@@ -4,18 +4,19 @@ import com.quid.webSSHControll.ssh.domain.createSSH
 
 interface Execute {
 
-    fun execute(path: String, file: String)
+    fun execute(command: String)
 
     class ExecuteCommand : Execute {
 
-        override fun execute(path: String, file: String) = with(createSSH()) {
+        override fun execute(command: String) = with(createSSH()) {
             exec().apply {
-                setCommand("cd $path; chmod +x $file; bash $file")
+                setCommand(command)
                 connect()
             }.let {
                 it.inputStream.bufferedReader().use { res -> println(res.readText()) }
             }
             disconnect()
         }
+
     }
 }

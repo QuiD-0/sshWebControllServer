@@ -15,7 +15,7 @@ interface RunSh {
 
         override fun execute(path: String, file: String) =
             takeIf { find.existFile(path, file) }
-                ?.let { exec.execute(path, file) }
+                ?.let { exec.execute("cd $path; chmod +x $file; bash $file") }
                 ?: throw Exception("File Not Found")
     }
 }

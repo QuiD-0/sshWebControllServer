@@ -23,7 +23,7 @@ class ExecuteTest {
     @Test
     fun execute() {
         assertDoesNotThrow {
-            execute.execute("/home/wodnd", "test.sh")
+            execute.execute("cd /home/wodnd; chmod +x run.sh; bash run.sh")
         }
     }
 }
